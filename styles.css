@@ -1,0 +1,265 @@
+:root {
+    --light-green: #7f8b51;
+    --dark-green: #283618;
+    --light-white: #FEFAE0;
+    --dark-white: #e6e2c8;
+    --light-brown: #DDA15E;
+    --dark-brown: #BC6C25;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-white);
+    overflow: hidden;
+}
+
+h3, h4 {
+    text-align: center;
+}
+
+ul {
+    list-style-type:none;
+    padding: 0 20px;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    color: var(--dark-green);
+}
+
+.menu {
+    height: 100%;
+    width: 20%;
+    min-width: 150px !important;
+    background-color: var(--light-white);
+}
+
+.menu a {
+    display: block;
+    color: var(--light-green);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu a.active {
+    color: var(--dark-green);
+    background-color: var(--dark-white);
+}
+
+.menu a:hover:not(.active) {
+    color: var(--dark-white);
+    background-color: var(--dark-green);
+}
+
+.col {
+    background-color: var(--dark-white);
+    height: 100%;
+    width: 80%;
+}
+
+.content {
+    margin-top: 15px;
+    background-color: var(--light-white);
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    float: right;
+    overflow: scroll;
+}
+
+.row {
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    text-align: center;
+    display: block !important;
+}
+
+.column {
+    flex: 25%;
+    max-width: calc(25% - 8px);
+    padding: 0 20px;
+}
+
+/*GRID*/
+.box-container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.box-col {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .box-container {
+        display: block;
+    }
+}
+
+.box {
+    padding-top: 100px;
+    justify-content: center;
+}
+
+@media screen and (min-width: 500px) {
+    .menu {
+        display: block;
+    }
+    .menu a {
+        float: none;
+        margin: 0;
+    }
+    .menu a.active {
+        border-right: 5px solid var(--dark-green);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        display: inline;
+    }
+
+    .header {
+        display: none !important;
+    }
+
+    .col {
+        width: calc(100% - 15px);
+    }
+    .menu {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .menu a {
+        padding: 5px;
+        height: auto;
+        margin: 0;
+    }
+    .menu a.active {
+        border-bottom: 3px solid var(--dark-green);
+    }
+}
+
+/*IMAGES-VIDEOS*/
+.header-box {
+    display: block;
+}
+
+.image {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.video-box {
+    margin-top: 8px;
+    display:block;
+}
+
+.video {
+    width: auto    !important;
+    height: auto   !important;
+}
+
+.profile-image {
+    max-height: 300px;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.header {
+    display: block;
+    margin: 10px auto;
+    max-height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+/*RIBBON*/
+.ribbon{
+    position: absolute;
+    width: 250px;
+    line-height: 50px;
+    color: var(--light-white);
+    background: var(--dark-brown);
+    box-shadow: -1px 2px 3px rgba(0,0,0,0.5);
+}
+
+.ribbon:before, .ribbon:after{
+    position:absolute;
+    content: '';
+    display: block;
+}
+
+.ribbon:before{
+    width: 10px;
+    height: 100%;
+    padding: 0 0 14px;
+    left: -10px;
+    background:inherit;
+    border-radius: 10px 0 0 10px;
+}
+
+.ribbon:after{
+    width: 5px;
+    height: 10px;
+    background: rgba(0,0,0,0.35);
+    left: -5px;
+    border-radius: 10px 0 0 10px;
+}
+
+/*LINKS*/
+.link:link {
+    color: var(--light-brown) !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.link:visited {
+    color: var(--dark-brown) !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--dark-brown) !important;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.hidden-link:link {
+    color: var(--dark-green) !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.hidden-link:visited {
+    color: var(--dark-green) !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.hidden-link:hover {
+    color: var(--dark-brown) !important;
+    background-color: transparent;
+    text-decoration: none;
+}
